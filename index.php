@@ -6,19 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/mensagens.css">
     <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
     <title>Cadastro</title>
 </head>
 
 <body>
     <header>
-        <h1>Faça um cadastro</h1>
+        <h1>Bem-Vindo(a)</h1>
+        <a href="registros.php">Ver cadastros</a>
     </header>
-
+    <?php include "../Cadastro/includes/cad.php"; ?>
     <main>
         <div class="container">
-            <h1>Cadastre-se! ;) </h1>
-            <form action="dados_cad.php" method="post" id="cadastro">
+            <h1>Cadastre-se!</h1>
+
+            <form action="../Cadastro/validacoes/dados_cad.php" method="post" id="cadastro">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" placeholder="*OBRIGATÓRIO" required>
 

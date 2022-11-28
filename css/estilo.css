@@ -29,6 +29,25 @@ header>h1 {
     color: rgb(255, 255, 255);
 }
 
+header a {
+    position: absolute;
+    right: 15px;
+    border: solid 1px #012626;
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header a:hover {
+    transition: 200ms;
+    transform: scale(105%);
+    background-color: #012626;
+    border: solid 1px #fbfbfb;
+}
+
 body {
     height: 100%;
     display: flex;

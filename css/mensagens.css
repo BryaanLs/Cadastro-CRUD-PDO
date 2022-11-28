@@ -1,0 +1,30 @@
+.erro {
+    color: rgb(254, 122, 122);
+    text-decoration: double;
+    font-weight: 800;
+    background-color: #012626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vh;
+    height: 30px;
+    border-bottom: solid 3px #a40404;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.sucess {
+    color: #00c020;
+    text-decoration: double;
+    font-weight: 800;
+    background-color: #012626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vh;
+    height: 30px;
+    border-bottom: solid 3px #00c020;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+
+}
