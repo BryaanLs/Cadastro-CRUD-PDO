@@ -3,23 +3,36 @@ include "conexao.php";
 
 $sql = "SELECT * FROM usuario";
 $sql = $pdo->query($sql);
+$res = array();
+$res = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-if ($sql->rowCount() > 0) {
-    for ($i = 0; $i < 5; $i++) {
-        while ($row = $sql->fetch(PDO::FETCH_ASSOC)) {
-            echo '<tr>';
-            echo '<td>' . $row['id'] . '</td>';
-            echo '<td>' . $row['nome'] . '</td>';
-            echo '<td>' . $row['email'] . '</td>';
-            echo '<td>' . $row['sexo'] . '</td>';
-            echo '<td>' . $row['apelido'] . '</td>';
-            echo '<td><span class="btns"><button>Editar</button> <button>Excluir</button></span></td>';
-            echo '</tr>';
-            break;
+if (count($res) > 0) {
+    for ($i = 0; $i < count($res); $i++) {
+        echo "<tr>";
+        foreach ($res[$i] as $k => $v) {
+            if ($k != "id") {
+                echo "<td>" . $v . "</td>";
+            }
         }
+
+?>
+        <td id="btn_a">
+            <span class="btn_edit">
+                <a href="index.php?id=<?php echo $res[$i]["id"]; ?>">Editar</a>
+            </span>
+            <span class="btn_exc">
+                <a href="registros.php?id=<?php echo $res[$i]["id"]; ?>">Excluir</a>
+            </span>
+        </td>
+<?php
+        echo "</tr>";
     }
 }
 
-/* if ($sql->rowCount() > 5) {
-    break;
-} */
+if (isset($_GET['id'])) {
+    $id = addslashes($_GET['id']);
+    $exc = "DELETE FROM usuario WHERE id = '$id'";
+    $exc = $pdo->query($exc);
+    $exc->execute();
+    header('Location: registros.php');
+}

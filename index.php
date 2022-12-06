@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/mensagens.css">
     <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
     <title>Cadastro</title>
@@ -22,8 +22,8 @@
             <h1>Cadastre-se!</h1>
 
             <form action="../Cadastro/validacoes/dados_cad.php" method="post" id="cadastro">
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" placeholder="*OBRIGATÓRIO" required>
+                <label for="nome">Primeiro e segundo nome</label>
+                <input type="text" name="nome" placeholder="*OBRIGATÓRIO" required maxlength="20">
 
                 <label for="email">E-mail</label>
                 <input type="email" name="email" placeholder="*OBRIGATÓRIO" required>
@@ -36,7 +36,7 @@
                 </select>
 
                 <label for="Apelido">Apelido</label>
-                <input type="apelido" name="apelido" placeholder="*Opcional">
+                <input type="apelido" name="apelido" placeholder="*Opcional" maxlength="20">
             </form>
             <button type="submit" form="cadastro" id="btn_cad">Cadastrar</button>
         </div>

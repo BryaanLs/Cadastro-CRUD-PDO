@@ -24,7 +24,3 @@ if ($res > 0) {
     $res->execute();
     header('Location: ../index.php?sucess=1');
 }
-
-
-
-/* header('Location: registros.php'); */
