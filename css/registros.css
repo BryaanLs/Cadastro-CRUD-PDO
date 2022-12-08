@@ -12,7 +12,7 @@ html {
 }
 
 header {
-    background-color: black;
+
     width: 100%;
 }
 
@@ -85,8 +85,6 @@ main {
     align-items: center;
 }
 
-
-
 .container h1 {
 
     color: white;
@@ -96,12 +94,6 @@ main {
     width: 850px;
     margin-bottom: 25px;
 }
-
-/* .container tr {
-    outline: solid 1px #012626;
-
-
-} */
 
 .container td {
     color: white;
@@ -149,9 +141,39 @@ main {
         }
 
     }
+
+    @media(max-width:650px) {
+
+        .container {
+            width: 480px;
+        }
+
+        main .container h1 {
+            font-size: 15px;
+        }
+
+        .topbar h1 {
+            font-size: 23px;
+        }
+
+        .topbar a {
+            height: 22px;
+        }
+
+        footer ul {
+            font-size: 12px;
+        }
+
+        .container table {
+            width: 450px;
+        }
+
+        .container tr {
+            font-size: 11px;
+        }
+
+    }
 }
-
-
 
 .btns {
     width: 20vh;
@@ -190,9 +212,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 
 }
-
 
 .btn_edit {
     margin-right: 8px;
@@ -205,20 +227,20 @@ main {
 .btn_edit a:hover,
 .btn_exc a:hover {
     transition: 200ms;
-    transform: scale(105%);
+    transform: scale(80%);
 }
 
 .btn_edit a:hover {
     transition: 200ms;
     color: #038C7F;
+
 }
 
 .btn_exc a:hover {
     transition: 200ms;
     color: brown;
+
 }
-
-
 
 footer {
     margin-top: 15vh;
@@ -255,24 +277,16 @@ footer li {
     margin-right: 25px;
 }
 
-
-
 html::-webkit-scrollbar {
     width: 7px;
-
-    /* width of the entire scrollbar */
 }
 
 html::-webkit-scrollbar-track {
-    background: transparent;
-    /* color of the tracking area */
+    background: #01403A;
 }
 
 html::-webkit-scrollbar-thumb {
-    background-color: #01403A;
-    /* color of the scroll thumb */
+    background-color: #287d7475;
     border-radius: 20px;
-    /* roundness of the scroll thumb */
     border: 3px solid transparent;
-    /* creates padding around scroll thumb */
 }

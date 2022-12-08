@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/registros.css">
+    <link rel="stylesheet" href="css/mensagens.css">
     <link rel="stylesheet" href="../validacoes/registros.php">
-    <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens\favicon.ico" type="image/x-icon">
     <title>Cadastros</title>
 </head>
 
@@ -19,11 +20,11 @@
         </div>
     </header>
     <main>
+        <?php include "../Cadastro/includes/cad.php" ?>
         <div class="container">
-            <h1>Pessoas cadastradas </h1>
+            <h1>Pessoas cadastradas</h1>
             <table>
                 <tr>
-                    <!--                     <td>ID</td> -->
                     <td>Nome</td>
                     <td>E-mail</td>
                     <td>Sexo</td>
@@ -40,13 +41,11 @@
             <li>&copy;Todos os direitos reservados</li>
         </ul>
         <ul class="links">
-            <li><a href="#">Instagram</a> </li>
-            <li><a href="#">Linkedin</a> </li>
-            <li><a href="#">GitHub</a> </li>
-
+            <li><a href="https://www.instagram.com/bryaan_ls/" target="_blank">Instagram</a> </li>
+            <li><a href="https://www.linkedin.com/in/bryaanls/" target="_blank">Linkedin</a> </li>
+            <li><a href="https://github.com/BryaanLs/" target="_blank">GitHub</a> </li>
         </ul>
     </footer>
-
 </body>
 
 </html>

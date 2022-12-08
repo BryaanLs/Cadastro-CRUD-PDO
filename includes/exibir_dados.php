@@ -18,7 +18,7 @@ if (count($res) > 0) {
 ?>
         <td id="btn_a">
             <span class="btn_edit">
-                <a href="index.php?id=<?php echo $res[$i]["id"]; ?>">Editar</a>
+                <a href="update.php?id=<?php echo $res[$i]["id"]; ?>">Editar</a>
             </span>
             <span class="btn_exc">
                 <a href="registros.php?id=<?php echo $res[$i]["id"]; ?>">Excluir</a>
@@ -34,5 +34,5 @@ if (isset($_GET['id'])) {
     $exc = "DELETE FROM usuario WHERE id = '$id'";
     $exc = $pdo->query($exc);
     $exc->execute();
-    header('Location: registros.php');
+    header('Location: registros.php?del=1');
 }
