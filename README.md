@@ -13,6 +13,6 @@
 <h2>Linguagens utilizadas</h2>
 <ol>
   <li>Php;</li>
-  <li>HTML,CSS</li>
+  <li>HTML, CSS;</li>
   <li>MySQL.</li>
 </ol>
